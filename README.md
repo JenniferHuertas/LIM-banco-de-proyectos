@@ -1,29 +1,14 @@
-# mypinterest
+# Proyectos
 
-## Project setup
-```
-npm install
-```
+El principal objetivo de esta extensión de bootcamp es que puedas seguir profundizando en los fundamentos de javascript y la librería o framework que hayas escogido aprender. Por lo cual en este repositorio encontrarás diversos ejercicios y retos que te ayudaran a seguir profundizando en tu aprendizaje.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Retos
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- [Pinterest](02-pinterest.md)
+- [Lab-songs](01-lab-songs.md)
+- [Juego de memoria](03-cards-memory.md)
+- [Movie Challenge](04-movie-challenge)
 
-### Run your unit tests
-```
-npm run test:unit
-```
+## Ejercicios
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [Javascript: Retos de código](06-javascript-exercises)
