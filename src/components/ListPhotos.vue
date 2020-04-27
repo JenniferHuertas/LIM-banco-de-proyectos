@@ -5,10 +5,15 @@
 </template>
 
 <script>
+import getImages from '@/index.js';
+
 export default {
   name: 'ListPhotos',
   props: {
     msg: String,
+  },
+  methods: {
+    getImages,
   },
 };
 </script>
