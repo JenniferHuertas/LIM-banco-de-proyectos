@@ -1,11 +1,20 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <div class="container">
+      <div class="button-wrapper">
+        <span>{{getImages()}}</span>
+
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import getImages from '@/index.js';
+import getImages from '../unsplash';
+// import { toJson } from 'unsplash-js';
+// import unsplash from '../controller/unsplash';
+
 
 export default {
   name: 'ListPhotos',
@@ -15,6 +24,9 @@ export default {
   methods: {
     getImages,
   },
+  created() {
+    // getImages();
+  },
 };
 </script>
 
@@ -22,16 +34,5 @@ export default {
 <style scoped lang="scss">
 h3 {
   margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
 }
 </style>

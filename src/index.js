@@ -1,18 +1,18 @@
-const accesKey = ('w8VUjLkw3Ulex5O5Pjt3072JAE5eVY0i_pA0sZBernU');
-const endPoint = 'https://api.unsplash.com/photos/random';
+const accesKey = 'w8VUjLkw3Ulex5O5Pjt3072JAE5eVY0i_pA0sZBernU';
+const endPoint = 'https://api.unsplash.com/search/photos';
 
-export default async function getImages() {
-  const response = await fetch(`${endPoint}?client_id=${accesKey}&count=30`);
+export default async function searchImages(query) {
+  const response = await fetch(`${endPoint}?query=${query
+  }&client_id=${accesKey}`);
   const jsonResponse = await response.json();
-  console.log(jsonResponse);
   // const imagesList = await jsonResponse.results;
-  function createImages(images) {
-    for (let i = 0; i < images.length; i += 1) {
+  function createImages(imagesList) {
+    for (let i = 0; i < imagesList.length; i += 1) {
       const image = document.createElement('img');
-      image.src = images[i].urls.thumb;
+      image.src = imagesList[i].urls.thumb;
       document.body.appendChild(image);
     }
   }
   createImages(jsonResponse);
 }
-getImages('');
+searchImages('');
