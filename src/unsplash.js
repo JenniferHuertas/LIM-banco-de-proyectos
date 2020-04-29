@@ -4,10 +4,18 @@ const unsplash = new Unsplash({ accessKey: 'w8VUjLkw3Ulex5O5Pjt3072JAE5eVY0i_pA0
 
 
 export default function getImages() {
-  unsplash.photos.listPhotos(5, 20, 'latest')
+  unsplash.photos.listPhotos(5, 20, 'popular')
     .then(toJson)
     .then((json) => {
       console.log(json);
+      function createImages(imageList) {
+        for (let i = 0; i < imageList.length; i += 1) {
+          const image = document.createElement('img');
+          image.src = imageList[i].urls.thumb;
+          document.body.appendChild(image);
+        }
+      }
+      createImages(json);
     });
 }
 

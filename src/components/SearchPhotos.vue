@@ -16,7 +16,6 @@
       :key="i"
       style="trasition: transform 300ms"
       >
-      <img :src="image.urls.small" :alt="image.alt_description"/>
       </Stack-Item>
       </Stack>
     </div>
